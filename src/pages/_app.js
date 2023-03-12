@@ -1,14 +1,19 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from "@/components/header/Header";
+// import { Provider } from 'react-redux';
+import { wrapper } from '../../store/store';
+
+import Header from "@/components/common/header/Header";
 
 // import '@/styles/globals.css'
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap');
   },[]);
+
+  // const { store, props } = wrapper.useWrappedStore(rest);
 
   return (
     <>
@@ -23,3 +28,5 @@ export default function App({ Component, pageProps }) {
     </>
   )
 }
+
+export default wrapper.withRedux(App);
