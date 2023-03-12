@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-import profilePic from '../../../../public/user.svg';
-
-export default function TableView({employees}) {
+export default function TableView({employees, defaultPic}) {
   return (
     <table className="table table-bordered">
       <thead>
@@ -22,7 +20,7 @@ export default function TableView({employees}) {
         <tr key={employee._id}>
           <td className="text-center">
               <Image
-                src={employee.photo ? employee.photo : profilePic}
+                src={employee.photo ? employee.photo : defaultPic}
                 height={144}
                 width={144}
                 alt="profile photo"

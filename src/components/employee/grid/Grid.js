@@ -1,18 +1,19 @@
 import Image from "next/image";
 
-export default function Grid({employees}) {
+export default function Grid({employees, defaultPic}) {
   return (
     <>
       {employees?.map((employee) => (
-        <div key={employee._id} className="card col-3" >
-          {employee.photo && (
+        <div key={employee._id} className="card col-3">
+          <div className="text-center">
             <Image
-              src={employee.photo}
+              src={employee.photo ? employee.photo: defaultPic}
               height={144}
               width={144}
               alt="profile photo"
+              className='mt-2'
             />
-          )}
+          </div>
 
           <div className="card-body">
             <p className="card-text mb-0">{employee.first_name} {' '} {employee.last_name}</p>

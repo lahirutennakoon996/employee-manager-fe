@@ -1,19 +1,16 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-// import { Provider } from 'react-redux';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 import { wrapper } from '../../store/store';
-
 import Header from "@/components/common/header/Header";
-
-// import '@/styles/globals.css'
 
 function App({ Component, pageProps }) {
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap');
   },[]);
-
-  // const { store, props } = wrapper.useWrappedStore(rest);
 
   return (
     <>
@@ -25,6 +22,7 @@ function App({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <ToastContainer />
     </>
   )
 }
