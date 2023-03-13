@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Employee list should match snapshot 1`] = `
+<div>
+  <div
+    class="container "
+  >
+    <div
+      class="row text-end"
+    >
+      <div
+        class="col"
+      >
+        <button
+          class="btn btn-primary my-2"
+          type="button"
+        >
+          Add Employee
+        </button>
+         
+        <button
+          class="btn btn-primary my-2"
+          type="button"
+        >
+          Toggle view
+        </button>
+      </div>
+    </div>
+    <div
+      class="row"
+    />
+  </div>
+</div>
+`;

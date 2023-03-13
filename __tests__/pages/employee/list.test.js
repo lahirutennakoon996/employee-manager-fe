@@ -13,8 +13,16 @@ describe('Employee list', () => {
   };
   const mockStore = configureStore();
   const store = mockStore(initialState);
+  let component;
 
-  render(<Provider store={store}><List /></Provider>);
+  beforeEach(() => {
+    const componentRendered = render(<Provider store={store}><List /></Provider>);
+    component = componentRendered.container;
+  });
+
+  it('should match snapshot', () => {
+    expect(component).toMatchSnapshot()
+  })
 
   it('renders the Add button', () => {
     const addEmployeeBtn = screen.getByRole('button', {
