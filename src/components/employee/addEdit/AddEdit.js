@@ -45,12 +45,11 @@ export default function AddEdit({employee}) {
           <InputField labelName='Email' identifier='email' />
           <InputField labelName='Phone' identifier='phone' />
           <InputField labelName='Gender' identifier='gender' isDropdown
-                      dropdownOptions={Object.values(employeeConfig.gender)}/>
+                      dropdownOptions={Object.values(employeeConfig.gender)} />
 
           <button type="submit" className="btn btn-primary">Add</button>
         </Form>
       </Formik>
     </div>
-
   )
 }

@@ -9,12 +9,7 @@ const employeeUrl = 'employee';
  * @returns {Promise<any>}
  */
 export const getEmployees = async () => {
-  try {
-    return get(`${employeeUrl}?limit=0&page=1&column=-1&order=${sortConfig.sortingOrder.descending}&search=`);
-  }
-  catch (error) {
-    throw new Error(error);
-  }
+  return get(`${employeeUrl}?limit=0&page=1&column=-1&order=${sortConfig.sortingOrder.descending}&search=`);
 }
 
 /**
@@ -23,10 +18,5 @@ export const getEmployees = async () => {
  * @returns {Promise<any>}
  */
 export const createEmployee = async (body) => {
-  try {
-    return postOrPut(`${employeeUrl}`, config.httpMethod.post, body);
-  }
-  catch (error) {
-    throw new Error(error);
-  }
+  return postOrPut(`${employeeUrl}`, config.httpMethod.post, body);
 }

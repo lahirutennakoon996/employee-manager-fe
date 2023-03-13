@@ -4,8 +4,10 @@ const config = {
     table: 'table',
   },
   httpMethod: {
+    get: 'GET',
     post: 'POST',
     put: 'PUT',
+    delete: 'DELETE',
   }
 };
 
