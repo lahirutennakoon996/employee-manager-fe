@@ -3,7 +3,7 @@ import { HYDRATE } from 'next-redux-wrapper';
 
 const initialState = {
     allEmployees: [],
-    singleEmployee: {},
+    singleEmployee: null,
 };
 
 export const employeeSlice = createSlice({

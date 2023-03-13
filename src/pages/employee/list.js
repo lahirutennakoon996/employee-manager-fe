@@ -1,6 +1,6 @@
-import Link from "next/link";
 import {useState} from "react";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import { useRouter } from 'next/router';
 
 import TableView from "@/components/employee/tableView/TableView";
 import Grid from "@/components/employee/grid/Grid";
@@ -14,6 +14,8 @@ const gridView = config.view.grid;
 const tableView = config.view.table;
 
 export default function List() {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const employees = useSelector(selectAllEmployeesState);
   const [view, setView] = useState(gridView);
 
@@ -22,11 +24,18 @@ export default function List() {
     setView((prevState) => prevState === gridView ? tableView : gridView);
   }
 
+  const goToAdd = () => {
+    dispatch(setSingleEmployee(null));
+    router.push('/employee/add');
+  }
+
   return (
     <div className="container ">
       <div className="row text-end">
         <div className="col">
-          <Link href='/employee/add'>Add Employee</Link>
+          <button type="button" className="btn btn-primary my-2" onClick={goToAdd}>
+            Add Employee
+          </button>
           {' '}
           <button type="button" className="btn btn-primary my-2" onClick={toggleView}>
             Toggle view

@@ -42,7 +42,7 @@ export const remove = async (url) => {
     method: config.httpMethod.delete,
   });
 
-  return response.json();
+  return handleResponse(response);
 }
 
 /**

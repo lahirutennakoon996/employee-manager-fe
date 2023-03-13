@@ -23,11 +23,11 @@ export default function AddEdit() {
   const employee = useSelector(selectSingleEmployeeState);
 
   const initialValues = {
-    first_name: employee.first_name || '',
-    last_name: employee.last_name || '',
-    email: employee.email || '',
-    phone: employee.phone || '+94',
-    gender: employee.gender || employeeConfig.gender.male,
+    first_name: employee?.first_name || '',
+    last_name: employee?.last_name || '',
+    email: employee?.email || '',
+    phone: employee?.phone || '+94',
+    gender: employee?.gender || employeeConfig.gender.male,
   };
 
   const submitForm = async (formData) => {

@@ -30,3 +30,12 @@ export const createEmployee = async (body) => {
 export const updateEmployee = async (id, body) => {
   return postOrPut(`${employeeUrl}/${id}`, config.httpMethod.put, body);
 }
+
+/**
+ * Delete employee
+ * @param id
+ * @returns {Promise<void>}
+ */
+export const deleteEmployee = async (id) => {
+  return remove(`${employeeUrl}/${id}`);
+}
