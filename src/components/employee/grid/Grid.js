@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import ActionButtons from "@/components/employee/actionButtons/ActionButtons";
+
 export default function Grid({employees, defaultPic}) {
   return (
     <>
@@ -20,7 +22,7 @@ export default function Grid({employees, defaultPic}) {
             <p className="card-text mb-0">{employee.email}</p>
             <p className="card-text mb-0">{employee.phone}</p>
             <p className="card-text mb-0">{employee.gender}</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
+            <ActionButtons selectedEmployee={employee} />
           </div>
         </div>
       ))}

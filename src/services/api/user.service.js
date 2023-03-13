@@ -20,3 +20,13 @@ export const getEmployees = async () => {
 export const createEmployee = async (body) => {
   return postOrPut(`${employeeUrl}`, config.httpMethod.post, body);
 }
+
+/**
+ * Update employee
+ * @param id
+ * @param body
+ * @returns {Promise<any>}
+ */
+export const updateEmployee = async (id, body) => {
+  return postOrPut(`${employeeUrl}/${id}`, config.httpMethod.put, body);
+}

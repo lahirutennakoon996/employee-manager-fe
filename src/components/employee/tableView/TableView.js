@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ActionButtons from "@/components/employee/actionButtons/ActionButtons";
 
 export default function TableView({employees, defaultPic}) {
   return (
@@ -31,7 +32,9 @@ export default function TableView({employees, defaultPic}) {
           <td>{employee.email}</td>
           <td>{employee.phone}</td>
           <td>{employee.gender}</td>
-          <td></td>
+          <td>
+            <ActionButtons selectedEmployee={employee} />
+          </td>
         </tr>
       ))}
       </tbody>

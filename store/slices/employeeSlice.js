@@ -30,4 +30,5 @@ export const employeeSlice = createSlice({
 
 export const { setAllEmployees, setSingleEmployee } = employeeSlice.actions;
 export const selectAllEmployeesState = (state) => state.employees.allEmployees;
+export const selectSingleEmployeeState = (state) => state.employees.singleEmployee;
 export default employeeSlice.reducer;
