@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic modal should match snapshot 1`] = `
+<div>
+  <div
+    class="modal fade"
+    id="basicModal"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header"
+        >
+          <h1
+            class="modal-title fs-5"
+            id="basicModalLabel"
+          >
+            Are you sure?
+          </h1>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          />
+        </div>
+        <div
+          class="modal-body"
+        >
+          This will delete the employee from the system.
+        </div>
+        <div
+          class="modal-footer"
+        >
+          <button
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Cancel
+          </button>
+          <button
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+            type="button"
+          >
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

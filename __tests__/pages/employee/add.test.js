@@ -24,9 +24,17 @@ describe('Add Employee Form', () => {
     expect(component).toMatchSnapshot()
   })
 
+  it('render the list view link', () => {
+    const listLink = screen.getByRole('link', {
+      name: /list view/i,
+    });
+    expect(listLink).toBeInTheDocument();
+    expect(listLink).not.toBeDisabled();
+  })
+
   it('render the first name input', () => {
     const firstNameInput = screen.getByRole('textbox', {
-      name: /First Name/,
+      name: /First Name/i,
     });
     expect(firstNameInput).toBeInTheDocument();
     expect(firstNameInput).not.toBeDisabled();
@@ -35,7 +43,7 @@ describe('Add Employee Form', () => {
 
   it('render the last name input', () => {
     const lastNameInput = screen.getByRole('textbox', {
-      name: /Last Name/,
+      name: /Last Name/i,
     });
     expect(lastNameInput).toBeInTheDocument();
     expect(lastNameInput).not.toBeDisabled();
@@ -44,7 +52,7 @@ describe('Add Employee Form', () => {
 
   it('render the email input', () => {
     const emailInput = screen.getByRole('textbox', {
-      name: /Email/,
+      name: /Email/i,
     });
     expect(emailInput).toBeInTheDocument();
     expect(emailInput).not.toBeDisabled();
@@ -53,7 +61,7 @@ describe('Add Employee Form', () => {
 
   it('render the phone input', () => {
     const phoneInput = screen.getByRole('textbox', {
-      name: /Phone/,
+      name: /Phone/i,
     });
     expect(phoneInput).toBeInTheDocument();
     expect(phoneInput).not.toBeDisabled();
@@ -62,7 +70,7 @@ describe('Add Employee Form', () => {
 
   it('render the gender select', () => {
     const genderInput = screen.getByRole('combobox', {
-      name: /Gender/,
+      name: /Gender/i,
     });
     expect(genderInput).toBeInTheDocument();
     expect(genderInput).not.toBeDisabled();
