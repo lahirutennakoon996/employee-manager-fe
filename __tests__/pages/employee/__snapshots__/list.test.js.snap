@@ -28,7 +28,12 @@ exports[`Employee list should match snapshot 1`] = `
     </div>
     <div
       class="row"
-    />
+    >
+      <div
+        class="row"
+        data-testid="grid-view"
+      />
+    </div>
   </div>
 </div>
 `;

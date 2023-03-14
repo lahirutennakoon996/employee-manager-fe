@@ -4,7 +4,7 @@ import ActionButtons from "@/components/employee/actionButtons/ActionButtons";
 
 export default function Grid({employees, defaultPic}) {
   return (
-    <>
+    <div data-testid='grid-view' className='row'>
       {employees?.map((employee) => (
         <div key={employee._id} className="card col-3">
           <div className="text-center">
@@ -26,6 +26,6 @@ export default function Grid({employees, defaultPic}) {
           </div>
         </div>
       ))}
-    </>
+    </div>
   )
 }

@@ -3,7 +3,7 @@ import ActionButtons from "@/components/employee/actionButtons/ActionButtons";
 
 export default function TableView({employees, defaultPic}) {
   return (
-    <table className="table table-bordered">
+    <table className="table table-bordered" data-testid="table-view">
       <thead>
       <tr>
         <th scope="col">Image</th>

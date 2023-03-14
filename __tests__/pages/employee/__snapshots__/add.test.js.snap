@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Employee Form should match snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="row text-end mb-5 mt-2"
+    >
+      <a
+        href="/employee/list"
+      >
+        List View
+      </a>
+    </div>
+    <div
+      class="row text-center"
+    >
+      <form
+        action="#"
+      >
+        <div
+          class="row my-3 mx-5"
+        >
+          <label
+            class="col-4 col-form-label text-end"
+            for="first_name"
+          >
+            First Name
+          </label>
+          <div
+            class="col-4"
+          >
+            <input
+              class="form-control"
+              id="first_name"
+              name="first_name"
+              value=""
+            />
+            <div
+              class="errorMsg"
+            />
+          </div>
+        </div>
+        <div
+          class="row my-3 mx-5"
+        >
+          <label
+            class="col-4 col-form-label text-end"
+            for="last_name"
+          >
+            Last Name
+          </label>
+          <div
+            class="col-4"
+          >
+            <input
+              class="form-control"
+              id="last_name"
+              name="last_name"
+              value=""
+            />
+            <div
+              class="errorMsg"
+            />
+          </div>
+        </div>
+        <div
+          class="row my-3 mx-5"
+        >
+          <label
+            class="col-4 col-form-label text-end"
+            for="email"
+          >
+            Email
+          </label>
+          <div
+            class="col-4"
+          >
+            <input
+              class="form-control"
+              id="email"
+              name="email"
+              value=""
+            />
+            <div
+              class="errorMsg"
+            />
+          </div>
+        </div>
+        <div
+          class="row my-3 mx-5"
+        >
+          <label
+            class="col-4 col-form-label text-end"
+            for="phone"
+          >
+            Phone
+          </label>
+          <div
+            class="col-4"
+          >
+            <input
+              class="form-control"
+              id="phone"
+              name="phone"
+              value="+94"
+            />
+            <div
+              class="errorMsg"
+            />
+          </div>
+        </div>
+        <div
+          class="row my-3 mx-5"
+        >
+          <label
+            class="col-4 col-form-label text-end"
+            for="gender"
+          >
+            Gender
+          </label>
+          <div
+            class="col-4"
+          >
+            <select
+              class="form-select"
+              id="gender"
+              name="gender"
+            >
+              <option
+                value="M"
+              >
+                M
+              </option>
+              <option
+                value="F"
+              >
+                F
+              </option>
+            </select>
+            <div
+              class="errorMsg"
+            />
+          </div>
+        </div>
+        <button
+          class="btn btn-primary"
+          type="submit"
+        >
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

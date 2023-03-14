@@ -9,7 +9,7 @@ export default function InputField({labelName, identifier, isDropdown, dropdownO
       <label htmlFor={identifier} className="col-4 col-form-label text-end">{labelName}</label>
       <div className="col-4">
         {isDropdown ? (
-            <Field name="gender" as="select" className="form-select">
+            <Field id={identifier} name={identifier} as="select" className="form-select">
               {dropdownOptions.map((dropdownOption) => (
                 <option key={dropdownOption} value={dropdownOption}>{dropdownOption}</option>
               ))}
@@ -20,7 +20,8 @@ export default function InputField({labelName, identifier, isDropdown, dropdownO
                 field,
                 meta: { touched, error }
               }) => (
-              <input className={ touched && error ? cx("form-control", styles.errorBorder) : "form-control" } { ...field } />
+              <input id={identifier}
+                     className={ touched && error ? cx("form-control", styles.errorBorder) : "form-control" } { ...field } />
             )}
           </Field>
         )}

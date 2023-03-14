@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import userEvent from '@testing-library/user-event';
 
 import List from "@/pages/employee/list";
 
@@ -31,5 +32,24 @@ describe('Employee list', () => {
 
     expect(addEmployeeBtn).toBeInTheDocument();
     expect(addEmployeeBtn).not.toBeDisabled();
+  })
+
+  it('render the Toggle View button', async () => {
+    const toggle = screen.getByRole('button', {
+      name: /toggle view/i,
+    });
+
+    expect(toggle).toBeInTheDocument();
+    expect(toggle).not.toBeDisabled();
+
+    // Check for grid view
+    const gridView = screen.getByTestId('grid-view');
+    expect(gridView).toBeInTheDocument();
+
+    // Check for table view after clicking 'toggle' button
+    await userEvent.click(toggle);
+    expect(gridView).not.toBeInTheDocument();
+    const tableView = screen.getByTestId('table-view');
+    expect(tableView).toBeInTheDocument();
   })
 })
