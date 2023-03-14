@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
 import userEvent from '@testing-library/user-event';
 
 import List from "@/pages/employee/list";
+import mockStore from "../../../__mocks__/react-redux.mock";
 
 describe('Employee list', () => {
   const initialState = {
@@ -12,7 +12,6 @@ describe('Employee list', () => {
       allEmployees: [],
     }
   };
-  const mockStore = configureStore();
   const store = mockStore(initialState);
   let component;
 

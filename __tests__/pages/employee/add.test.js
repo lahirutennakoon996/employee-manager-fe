@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
 
 import Add from "@/pages/employee/add";
 import employeeConfig from "@/config/employee.config";
+import mockStore from "../../../__mocks__/react-redux.mock";
 
 describe('Add Employee Form', () => {
   const initialState = {
@@ -11,7 +11,7 @@ describe('Add Employee Form', () => {
       allEmployees: [],
     }
   };
-  const mockStore = configureStore();
+
   const store = mockStore(initialState);
   let component;
 
